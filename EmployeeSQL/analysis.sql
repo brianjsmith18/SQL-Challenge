@@ -25,8 +25,12 @@ inner join departments as d on d.dept_name = d.dept_name
 
 
 --5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+select first_name, last_name, sex
+from employees 
+where first_name = 'Hercules'
 
 --6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
+
 
 --7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
