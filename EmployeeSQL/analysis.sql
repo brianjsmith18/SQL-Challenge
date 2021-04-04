@@ -15,9 +15,14 @@ where hire_date between '1986-01-01' and '1986-12-31'
 select dm.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
 from dept_mgr as dm
 inner join employees as e on e.emp_no = dm.emp_no
-inner join departments as d on d.dept_no = dm.dept_no
+inner join departments as d on d.dept_no = dm.dept_no 
 
 --4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+select de.emp_no, e.last_name, e.first_name, d.dept_name
+from dept_emp as de
+inner join employees as e on e.emp_no = de.emp_no
+inner join departments as d on d.dept_name = d.dept_name
+
 
 --5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
